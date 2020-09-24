@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- 自己的css -->
+    <link rel="stylesheet" href="vue/element-ui.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<el-container id="app">
+    <el-header style="height: 100%;">
+        <div :class="classList1" style="background-color: #009688;" v-mwheel="'d1'"></div>
+        <div :class="classList2" style="background-color: #ffb800;" v-mwheel="'d2'"></div>
+        <div :class="classList3" style="background-color: #67ccf4;" v-mwheel="'d3'"></div>
+        <div :class="classList4" style="background-color: #d9534f;" v-mwheel="'d4'"></div>
+    </el-header>
+</el-container>
+
+<script src="js/modernizr-3.11.2.min.js"></script>
+<!-- 自己的js -->
+<script src="vue/vue.js"></script>
+<script src="vue/element-ui.js"></script>
+<script src="vue/axios.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
