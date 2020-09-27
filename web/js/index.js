@@ -65,23 +65,6 @@ var app =new Vue({
                         }
                     }
                 })
-                el.addEventListener('DOMMouseScroll',function (e) {
-                    if(e.deltaY > 0){
-                        switch (binding.value) {
-                            case 'd1':app.d1up();break;
-                            case 'd2':app.d2up();break;
-                            case 'd3':app.d3up();break;
-                            case 'd4':break;
-                        }
-                    }else{
-                        switch (binding.value) {
-                            case 'd1':break;
-                            case 'd2':app.d2down();break;
-                            case 'd3':app.d3down();break;
-                            case 'd4':app.d4down();break;
-                        }
-                    }
-                })
             }
         }
     }
