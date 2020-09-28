@@ -1,3 +1,4 @@
+/* 通用css */
 .el-header{
     position: absolute;
     right: 0;
@@ -102,3 +103,30 @@ rotateCubeBottomIn {
         transform: translateY(-50%) translateZ(-200px) rotateX(45deg);
     }
 }
+
+/* 鼠标样式 */
+.cursor{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 5px solid grey;
+    transform: translate3d(-50%, -50%, 0) scale(1);
+    transition: 0.3s cubic-bezier(0.91, 0.03, 0.12, 1) transform, 0.3s cubic-bezier(0.91, 0.03, 0.12, 1) border;
+    user-select: none;
+    pointer-events: none;
+    z-index: 99;
+    border-radius: 100%;
+    box-sizing: border-box;
+    transform-origin: center center;
+}
+
+.cursor.active{
+    border: 1px solid grey;
+    transform: translate3d(-50%, -50%, 0) scale(2);
+}
+
+.interaction{
+    cursor:none !important;
+}
+
+/*  */
