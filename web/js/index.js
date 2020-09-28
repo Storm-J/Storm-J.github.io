@@ -92,4 +92,12 @@ $(document).ready(function() {
             $(".cursor").removeClass("active")
         }
     );
+
+    $(".el-icon-s-fold").click(function () {
+        $("#dark").css("width","100%");
+    });
+
+    $(".el-icon-s-unfold").click(function () {
+        $("#dark").css("width","0");
+    });
 });
