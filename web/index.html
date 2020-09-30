@@ -25,10 +25,10 @@
             <!-- nav -->
             <nav>
                 <dl>
-                    <dd class="interaction" @click=""><div class="ddModal">&nbsp;HI</div></dd>
-                    <dd class="interaction" @click=""><div class="ddModal">&nbsp;STUDY</div></dd>
-                    <dd class="interaction" @click=""><div class="ddModal">&nbsp;WORK</div></dd>
-                    <dd class="interaction" @click=""><div class="ddModal">&nbsp;LIVE</div></dd>
+                    <dd class="interaction"><div class="ddModal">&nbsp;HI</div></dd>
+                    <dd class="interaction" @click="d1up"><div class="ddModal">&nbsp;STUDY</div></dd>
+                    <dd class="interaction" @click="Nav3"><div class="ddModal">&nbsp;WORK</div></dd>
+                    <dd class="interaction" @click="Nav4"><div class="ddModal">&nbsp;LIVE</div></dd>
                 </dl>
             </nav>
             <!-- facade -->
@@ -43,7 +43,7 @@
         </div>
     </div>
     <!--  -->
-    <div id="d2" :class="classList2" v-mwheel="'d2'">
+    <div id="d2" :class="classList2" style="background-color: #009688;" v-mwheel="'d2'">
 
     </div>
     <!--  -->

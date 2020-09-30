@@ -50,6 +50,23 @@ var app =new Vue({
             this.classList3=['threeDTran','rotateCubeBottomIn']
             this.classList4=['threeDTran','rotateCubeBottomOut']
         },
+        // nav ClickEvent
+        Nav3(){
+            this.classList1=['threeDTran','rotateCubeTopOut']
+            this.classList2=['threeDTran']
+            this.classList3=['threeDTran','rotateCubeTopIn']
+            this.classList4=['threeDTran']
+            $('.facade').removeClass('active');
+            $("dd").animate({width:'hide'},350);
+        },
+        Nav4(){
+            this.classList1=['threeDTran','rotateCubeTopOut']
+            this.classList2=['threeDTran']
+            this.classList3=['threeDTran']
+            this.classList4=['threeDTran','rotateCubeTopIn']
+            $('.facade').removeClass('active');
+            $("dd").animate({width:'hide'},350);
+        },
     },
     directives: {
         // 自定义滚轮事件
