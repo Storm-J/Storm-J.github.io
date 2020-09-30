@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Storm J's Personal Territory</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <!-- 自己的css -->
@@ -11,35 +11,47 @@
     <link rel="stylesheet" href="css/index.css">
 
 </head>
-<body style="cursor: none !important;overflow: hidden;">
+<body style="cursor: none !important;overflow: hidden;font-family: 'Trebuchet MS', Helvetica, sans-serif">
 <el-container id="app" style="height: 100%;">
     <!-- 首页 -->
-    <div :class="classList1" v-mwheel="'d1'">
+    <div id="d1" :class="classList1" v-mwheel="'d1'" >
         <div id="light">
-            <!-- light背景 -->
             <div class="background" v-for="i in 12"></div>
-            <!-- 切换按钮  -->
             <i class="el-icon-s-fold interaction" style="right: 10%;top:10%;"></i>
-            
+            <!-- headPic -->
+            <div class="headPic interaction"></div>
+            <!-- title -->
+            <div class="top-name">Storm Jiang　<span style="color: #9d9d9d">Ordinary Programmer</span></div>
+            <!-- nav -->
+            <nav>
+                <dl>
+                    <dd class="interaction" @click=""><div class="ddModal">&nbsp;HI</div></dd>
+                    <dd class="interaction" @click=""><div class="ddModal">&nbsp;STUDY</div></dd>
+                    <dd class="interaction" @click=""><div class="ddModal">&nbsp;WORK</div></dd>
+                    <dd class="interaction" @click=""><div class="ddModal">&nbsp;LIVE</div></dd>
+                </dl>
+            </nav>
+            <!-- facade -->
+            <div class="facade"><span style="font-size: 2.5vh">Hi there , i am</span><br>Storm Jiang , aspire to be a great <span style="color: #000">UI Designer</span></div>
+            <!-- scrollTips -->
+            <div class="scrollTip"><div class="scrollBox"><span></span></div>Scroll Down</div>
         </div>
         <div id="dark">
-            <!-- dark背景 -->
             <div class="background" v-for="i in 12"></div>
-            <!-- 切换按钮 -->
             <i class="el-icon-s-unfold interaction" style="right: 10%;top:10%;"></i>
 
         </div>
     </div>
     <!--  -->
-    <div :class="classList2" style="background-color: #ffb800;" v-mwheel="'d2'">
+    <div id="d2" :class="classList2" v-mwheel="'d2'">
 
     </div>
     <!--  -->
-    <div :class="classList3" style="background-color: #67ccf4;" v-mwheel="'d3'">
+    <div id="d3" :class="classList3" style="background-color: #67ccf4;" v-mwheel="'d3'">
 
     </div>
     <!--  -->
-    <div :class="classList4" style="background-color: #d9534f;" v-mwheel="'d4'">
+    <div id="d4" :class="classList4" style="background-color: #d9534f;" v-mwheel="'d4'">
 
     </div>
     <!-- 鼠标样式 -->

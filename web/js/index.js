@@ -8,7 +8,7 @@ var app =new Vue({
         classList4:['threeDTran'],
     },
     created: function (){
-
+        $('.facade').addClass('active');
     },
     methods:{
         // 页面跳转动画
@@ -17,6 +17,8 @@ var app =new Vue({
             this.classList2=['threeDTran','rotateCubeTopIn']
             this.classList3=['threeDTran']
             this.classList4=['threeDTran']
+            $('.facade').removeClass('active');
+            $("dd").animate({width:'hide'},350);
         },
         d2up(){
             this.classList1=['threeDTran']
@@ -81,18 +83,18 @@ window.onmousemove = function(event) {
     Ele.style.left = event.clientX + "px";
     Ele.style.top = event.clientY + "px";
 }
-// 初始化interaction元素List
+
 $(document).ready(function() {
+    // 初始化interaction元素List
     $(".interaction").hover(
-        function () {
-            //mouseover
+        function () {//mouseover
             $(".cursor").addClass("active")
         },
         function () {//mouseout
             $(".cursor").removeClass("active")
         }
     );
-
+    // light&dark切换
     $(".el-icon-s-fold").click(function () {
         $("#dark").css("width","100%");
     });
@@ -100,4 +102,15 @@ $(document).ready(function() {
     $(".el-icon-s-unfold").click(function () {
         $("#dark").css("width","0");
     });
+    // HI页面显示
+    $("#d1").on("animationend",function () {
+        if ($(this).attr("class").includes("rotateCubeBottomIn"))
+            $('.facade').addClass('active');
+    });
+
+    $(".facade").on("animationend",function () {
+        $("dd").animate({width:'show'},350);
+    });
+
+
 });
