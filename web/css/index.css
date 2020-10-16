@@ -73,10 +73,12 @@ i{
     right: 0;
     width: 0;
     height: 100%;
-    transition:width 1s;
+    transition:width .5s;
     background-color: #222;
     z-index: 2;
     position: absolute;
+    perspective:2000px;
+    -webkit-perspective: 2000px;
 }
 
 #dark .background{
@@ -218,6 +220,28 @@ rotateCubeBottomIn {
     line-height: 11vh;
 }
 
+.dark-facade{
+    top:30%;
+    left: 11%;
+    font-size: 9.5vh;
+    width: 60%;
+    position: absolute;
+    font-weight: bold;
+    color: #9d9d9d;
+    line-height: 11vh;
+    border: 1px #9d9d9d solid;
+    padding: 6vh 8vh 14vh 10vh;
+    transition: transform .5s;
+    -webkit-transition: transform .5s;
+    transform-origin: left center;
+    -webkit-transform-origin: left center;
+}
+
+.dark-facade:hover{
+    transform: rotateY(10deg);
+    -webkit-transform: rotateY(10deg); /* Safari and Chrome */
+}
+
 .facade.active{
     display: inline;
     -webkit-animation: facademove 1s forwards;
@@ -267,7 +291,7 @@ nav dd{
 }
 
 nav dd:nth-child(1) .ddModal{
-    animation: navDDShow 1s linear forwards;
+    animation: navDDShow .8s linear forwards;
 }
 
 @keyframes
@@ -283,6 +307,24 @@ nav dd:hover .ddModal{
     width: 50%;
     color: #000;
     border-bottom-color: #000;
+}
+
+/* dark-nav */
+.dark-nav{
+    position: absolute;
+    top: 20%;
+    left: 12%;
+    width: 60%;
+}
+
+.dark-nav dd:nth-child(1) .ddModal{
+    animation: none !important;
+}
+
+.dark-nav .ddModal.active{
+    width: 50%;
+    color: #ffb800 !important;
+    border-bottom-color: #ffb800 !important;
 }
 
 /* scrollTip */
@@ -311,7 +353,7 @@ nav dd:hover .ddModal{
     display: inline-block;
     height: 5px;
     margin-left: -1px;
-    animation: scrollUpDown 1s infinite alternate linear;
+    animation: scrollUpDown .8s infinite alternate linear;
 }
 
 @keyframes

@@ -39,21 +39,35 @@
         <div id="dark">
             <div class="background" v-for="i in 12"></div>
             <i class="el-icon-s-unfold interaction" style="right: 10%;top:10%;"></i>
+            <!-- dark-nav -->
+            <nav class="dark-nav">
+                <dl>
+                    <dd class="interaction"><div class="ddModal active">&nbsp;HI</div></dd>
+                    <dd class="interaction"><div class="ddModal">&nbsp;STUDY</div></dd>
+                    <dd class="interaction"><div class="ddModal">&nbsp;WORK</div></dd>
+                    <dd class="interaction"><div class="ddModal">&nbsp;LIVE</div></dd>
+                </dl>
+            </nav>
+            <div class="">
+                <!-- dark-facade -->
+                <div class="dark-facade interaction">
+                    <span style="font-size: 2.5vh">Hi there , i am</span><br>Storm Jiang , aspire to be a great UI Designer
+                </div>
+            </div>
+            <div class="">
+                <div></div>
+            </div>
+            <div class=""></div>
+            <div class=""></div>
 
         </div>
     </div>
     <!--  -->
-    <div id="d2" :class="classList2" style="background-color: #009688;" v-mwheel="'d2'">
-
-    </div>
+    <div id="d2" :class="classList2" style="background-color: #009688;" v-mwheel="'d2'"></div>
     <!--  -->
-    <div id="d3" :class="classList3" style="background-color: #67ccf4;" v-mwheel="'d3'">
-
-    </div>
+    <div id="d3" :class="classList3" style="background-color: #67ccf4;" v-mwheel="'d3'"></div>
     <!--  -->
-    <div id="d4" :class="classList4" style="background-color: #d9534f;" v-mwheel="'d4'">
-
-    </div>
+    <div id="d4" :class="classList4" style="background-color: #d9534f;" v-mwheel="'d4'"></div>
     <!-- 鼠标样式 -->
     <div class="cursor"></div>
 </el-container>

@@ -129,5 +129,9 @@ $(document).ready(function() {
         $("dd").animate({width:'show'},350);
     });
 
+    $(".dark-nav dd").hover(function () {
+        $(this).siblings().children().removeClass("active");
+        $(this).children().addClass("active");
+    })
 
 });
