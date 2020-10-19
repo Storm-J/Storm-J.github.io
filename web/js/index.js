@@ -132,6 +132,30 @@ $(document).ready(function() {
     $(".dark-nav dd").hover(function () {
         $(this).siblings().children().removeClass("active");
         $(this).children().addClass("active");
+        switch($(this).children().attr('id')){
+            case 'darkNav1':
+                $("#darkContent1").siblings(".dark-content").fadeOut();
+                $("#darkContent1").fadeIn();
+                break;
+            case 'darkNav2':
+                $("#darkContent2").siblings(".dark-content").fadeOut();
+                $("#darkContent2").fadeIn();
+                break;
+            case 'darkNav3':
+                $("#darkContent3").siblings(".dark-content").fadeOut();
+                $("#darkContent3").fadeIn();
+                break;
+            case 'darkNav4':
+                $("#darkContent4").siblings(".dark-content").fadeOut();
+                $("#darkContent4").fadeIn();
+                break;
+        }
+    });
+    //
+    $("#darkContent3 .dark-content-inner").children().hover(function () {
+        $(this).children().css("height","100%")
+    },function () {
+        $(this).children().css("height","0")
     })
 
 });
