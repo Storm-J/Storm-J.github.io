@@ -73,7 +73,7 @@ i{
     right: 0;
     width: 0;
     height: 100%;
-    transition:width .5s ease-in;
+    transition:width .5s;
     background-color: #222;
     z-index: 2;
     position: absolute;
@@ -231,8 +231,8 @@ rotateCubeBottomIn {
     line-height: 11vh;
     border: 1px #9d9d9d solid;
     padding: 6vh 8vh 14vh 10vh;
-    transition: transform .5s ease-in;
-    -webkit-transition: transform .5s ease-in;
+    transition: transform .5s;
+    -webkit-transition: transform .5s;
     transform-origin: left center;
     -webkit-transform-origin: left center;
 }
@@ -240,8 +240,8 @@ rotateCubeBottomIn {
 .dark__interaction{
     border: 1px #9d9d9d solid;
     height: 58%;
-    transition: transform .5s ease-in;
-    -webkit-transition: transform .5s ease-in;
+    transition: transform .5s;
+    -webkit-transition: transform .5s;
     transform-origin: left center;
     -webkit-transform-origin: left center;
 }
@@ -300,8 +300,8 @@ nav dd{
     border-bottom: 2px #adadad solid;
     padding-bottom: 5px;
     margin-bottom: -2px;
-    transition:color 1s ease-in,width 1s ease-in,border-bottom-color 1s ease-in;
-    -webkit-transition:color 1s ease-in,width 1s ease-in,border-bottom-color 1s ease-in; /* Safari */
+    transition:color 1s,width 1s,border-bottom-color 1s;
+    -webkit-transition:color 1s,width 1s,border-bottom-color 1s; /* Safari */
 }
 
 nav dd:nth-child(1) .ddModal{
@@ -409,7 +409,7 @@ scrollUpDown{
 #darkContent3 .div1{
     width: 100%;
     height:0;
-    transition: height .3s ease-in;
+    transition: height .3s;
     position: absolute;
     bottom: 0;
 }
