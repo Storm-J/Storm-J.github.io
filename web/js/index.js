@@ -1,11 +1,13 @@
 // vue对象
 var app =new Vue({
     el:'#app',
-    data:{
-        classList1:['threeDTran','top'],
-        classList2:['threeDTran'],
-        classList3:['threeDTran'],
-        classList4:['threeDTran'],
+    data() {
+        return {
+            classList1:['threeDTran','top'],
+            classList2:['threeDTran'],
+            classList3:['threeDTran'],
+            classList4:['threeDTran'],
+        }
     },
     created: function (){
         $('.facade').addClass('active');
