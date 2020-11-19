@@ -203,7 +203,7 @@ rotateCubeBottomIn {
     height: 0;
     padding-bottom: calc(5.8% - 2px);
     border-radius: 50%;
-    background:#000 url("/img/headPic.jpg") no-repeat center;
+    background:#000;
     background-size: 100% 100%;
     position: absolute;
 }
