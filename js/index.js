@@ -7,10 +7,14 @@ var app =new Vue({
             classList2:['threeDTran'],
             classList3:['threeDTran'],
             classList4:['threeDTran'],
+            loadingObj: {},
         }
     },
     created: function (){
         $('.facade').addClass('active');
+    },
+    mounted:function(){
+        $('.sk-folding-cube').css("display","none")
     },
     methods:{
         // 页面跳转动画

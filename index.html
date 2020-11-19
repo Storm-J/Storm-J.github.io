@@ -9,9 +9,18 @@
     <!-- 自己的css -->
     <link rel="stylesheet" href="vue/element-ui.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/loading.css">
 
 </head>
 <body style="cursor: none !important;overflow: hidden;font-family: 'Trebuchet MS', Helvetica, sans-serif">
+
+<div class="sk-folding-cube">
+    <div class="sk-cube1 sk-cube"></div>
+    <div class="sk-cube2 sk-cube"></div>
+    <div class="sk-cube4 sk-cube"></div>
+    <div class="sk-cube3 sk-cube"></div>
+</div>
+
 <el-container id="app" style="height: 100%;" v-cloak>
     <!-- 首页 -->
     <div id="d1" :class="classList1" v-mwheel="'d1'" >
