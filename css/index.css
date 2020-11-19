@@ -48,6 +48,9 @@ i{
     opacity: 2;
 }
 
+[v-cloak]{
+    display: none;
+}
 /* 背景 */
 #light{
     width: 100%;
