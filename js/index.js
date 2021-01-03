@@ -7,7 +7,10 @@ var app =new Vue({
             classList2:['threeDTran'],
             classList3:['threeDTran'],
             classList4:['threeDTran'],
-            loadingObj: {},
+            // d2
+            d2margin:0,
+            d2torightDis :false,
+            d2toleftDis :true,
         }
     },
     created: function (){
@@ -73,6 +76,30 @@ var app =new Vue({
             $('.facade').removeClass('active');
             $("dd").animate({width:'hide'},350);
         },
+        openUrl(url,target){
+            window.open(url,target);
+        },
+        backTop(){
+            this.classList1=['threeDTran','rotateCubeBottomIn']
+            this.classList2=['threeDTran']
+            this.classList3=['threeDTran']
+            this.classList4=['threeDTran','rotateCubeBottomOut']
+        },
+        // d2
+        toleft(){
+            this.d2torightDis =false;
+            this.d2margin+=100;
+            if(this.d2margin>=0){
+                this.d2toleftDis=true;
+            }
+        },
+        toright(){
+            this.d2toleftDis =false;
+            this.d2margin-=100;
+            if(this.d2margin<=-300){
+                this.d2torightDis=true;
+            }
+        }
     },
     directives: {
         // 自定义滚轮事件
@@ -158,7 +185,7 @@ $(document).ready(function() {
         }
     });
     //
-    $("#darkContent3 .dark-content-inner").children().hover(function () {
+    $("#darkContent2 .dark-content-inner").children().hover(function () {
         $(this).children().css("height","100%")
     },function () {
         $(this).children().css("height","0")
