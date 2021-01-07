@@ -11,6 +11,7 @@ var app =new Vue({
             d2margin:0,
             d2torightDis :false,
             d2toleftDis :true,
+            d2navBar:25,
         }
     },
     created: function (){
@@ -89,6 +90,7 @@ var app =new Vue({
         toleft(){
             this.d2torightDis =false;
             this.d2margin+=100;
+            this.d2navBar-=25;
             if(this.d2margin>=0){
                 this.d2toleftDis=true;
             }
@@ -96,10 +98,16 @@ var app =new Vue({
         toright(){
             this.d2toleftDis =false;
             this.d2margin-=100;
+            this.d2navBar+=25;
             if(this.d2margin<=-300){
                 this.d2torightDis=true;
             }
-        }
+        },
+        GoDetails(){
+            $('#app').fadeOut(300,()=>{
+                //window.open(url,'_self');
+            });
+        },
     },
     directives: {
         // 自定义滚轮事件
