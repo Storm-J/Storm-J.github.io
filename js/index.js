@@ -104,8 +104,21 @@ var app =new Vue({
             }
         },
         GoDetails(){
-            $('#app').fadeOut(300,()=>{
-                //window.open(url,'_self');
+            $('#app').fadeOut(500,()=>{
+                switch (this.d2margin) {
+                    case 0:
+                        window.open("http://www.baidu.com",'_self');
+                        break;
+                    case -100:
+                        window.open("http://www.bilibili.com",'_self');
+                        break;
+                    case -200:
+                        window.open("https://www.csdn.net/",'_self');
+                        break;
+                    case -300:
+                        window.open("https://www.iconfont.cn/",'_self');
+                        break;
+                }
             });
         },
     },
