@@ -1,219 +1,32 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="favicon.ico">
     <title>Storm J's Personal Territory</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <!-- 自己的css -->
-    <link rel="stylesheet" href="vue/element-ui.css">
-    <link rel="stylesheet" href="css/loading.css">
-    <link rel="stylesheet/less" type="text/css" href="css/index.less">
     <link rel="stylesheet" href="iconfont/iconfont.css">
     <link rel="stylesheet" href="css/button.css">
-    <style>
-        [v-cloak] {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="css/loading.css">
+    <link href="css/app.a07c2e04.css" rel="preload" as="style">
+    <link href="css/chunk-vendors.c470e980.css" rel="preload" as="style">
+    <link href="js/app.5540edc5.js" rel="preload" as="script">
+    <link href="js/chunk-vendors.98a2f300.js" rel="preload" as="script">
+    <link href="css/chunk-vendors.c470e980.css" rel="stylesheet">
+    <link href="css/app.a07c2e04.css" rel="stylesheet">
 </head>
 <body style="cursor: none !important;overflow: hidden;font-family: 'Trebuchet MS', Helvetica, sans-serif">
-
+<noscript><strong>We're sorry but this Page doesn't work properly without JavaScript enabled. Please enable it to
+    continue.</strong></noscript>
 <div class="sk-folding-cube">
     <div class="sk-cube1 sk-cube"></div>
     <div class="sk-cube2 sk-cube"></div>
     <div class="sk-cube4 sk-cube"></div>
     <div class="sk-cube3 sk-cube"></div>
 </div>
-
-<el-container id="app" v-cloak>
-    <!-- 首页 -->
-    <div id="d1" :class="classList1" v-mwheel="'d1'">
-        <div id="light">
-            <div class="background" v-for="i in 12"></div>
-            <i class="el-icon-s-fold interaction" style="right: 10%;top:10%;"></i>
-            <!-- headPic -->
-            <div class="headPic interaction"></div>
-            <!-- title -->
-            <div class="top-name">Storm Jiang　<span style="color: #9d9d9d">Ordinary Programmer</span></div>
-            <!-- nav -->
-            <nav>
-                <dl>
-                    <dd class="interaction">
-                        <div class="ddModal">&nbsp;HI</div>
-                    </dd>
-                    <dd class="interaction" @click="d1up">
-                        <div class="ddModal">&nbsp;WORK</div>
-                    </dd>
-                    <dd class="interaction" @click="Nav3">
-                        <div class="ddModal">&nbsp;LIVE</div>
-                    </dd>
-                    <dd class="interaction" @click="Nav4">
-                        <div class="ddModal">&nbsp;CONTACT</div>
-                    </dd>
-                </dl>
-            </nav>
-            <!-- facade -->
-            <div class="facade"><span style="font-size: 2.5vh">Hi there , i am</span><br>Storm Jiang , aspire to be a
-                great <span style="color: #000">Front-end Developer</span></div>
-            <!-- scrollTips -->
-            <div class="scrollTip">
-                <div class="scrollBox"><span></span></div>
-                Scroll Down
-            </div>
-        </div>
-        <div id="dark">
-            <div class="background" v-for="i in 12"></div>
-            <i class="el-icon-s-unfold interaction" style="right: 10%;top:10%;"></i>
-            <!-- dark-nav -->
-            <nav class="dark-nav">
-                <dl>
-                    <dd class="interaction">
-                        <div id="darkNav1" class="ddModal active">&nbsp;HI</div>
-                    </dd>
-                    <dd class="interaction">
-                        <div id="darkNav2" class="ddModal">&nbsp;WORK</div>
-                    </dd>
-                    <dd class="interaction">
-                        <div id="darkNav3" class="ddModal">&nbsp;LIVE</div>
-                    </dd>
-                    <dd class="interaction">
-                        <div id="darkNav4" class="ddModal">&nbsp;CONTACT</div>
-                    </dd>
-                </dl>
-            </nav>
-            <div id="darkContent1" class="dark-content">
-                <!-- dark-facade -->
-                <div class="dark-facade interaction">
-                    <span style="font-size: 2.5vh">Hi there , i am</span><br>Storm Jiang , aspire to be a great
-                    Front-end Developer
-                </div>
-            </div>
-            <div id="darkContent2" class="dark-content">
-                <div class="dark-content-inner">
-                    <el-col :offset="1" :span="5" class="dark__interaction interaction">
-                        BackStage
-                        <div class="div1"></div>
-                    </el-col>
-                    <el-col :offset="1" :span="5" class="dark__interaction interaction">
-
-                        <div class="div2"></div>
-                    </el-col>
-                    <el-col :offset="1" :span="5" class="dark__interaction interaction">
-                        <div class="div3"></div>
-                    </el-col>
-                    <el-col :offset="1" :span="5" class="dark__interaction interaction">
-                        <div class="div4"></div>
-                    </el-col>
-                </div>
-            </div>
-            <div id="darkContent3" class="dark-content">
-                <div class="dark-content-inner"></div>
-            </div>
-            <div id="darkContent4" class="dark-content">
-                <div class="dark-content-inner"></div>
-            </div>
-        </div>
-    </div>
-    <!-- 作品集 -->
-    <div id="d2" :class="classList2" v-mwheel="'d2'">
-        <el-container>
-            <div class="bgbox-content">
-                <ul class="bgbox" :style="{'margin-left':d2margin+'%'}">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="bgpic-content">
-                <ul class="bgpic" :style="{'margin-left':d2margin+'%'}">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <div @click="toleft" v-show="!d2toleftDis" class="leftD2Button interaction"><i class="el-icon-arrow-left"></i></div>
-                <div @click="toright" v-show="!d2torightDis" class="rightD2Button interaction"><i class="el-icon-arrow-right"></i></div>
-            </div>
-            <div class="bgtitle-content">
-                <ul class="bgtitle" :style="{'margin-left':d2margin+'%'}">
-                    <li>BackStage</li>
-                    <li>Movie</li>
-                    <li>be pending</li>
-                    <li>be pending</li>
-                </ul>
-            </div>
-            <!-- 固定内容 -->
-            <div class="navBar">
-                <dl>
-                    <dd class="interaction">
-                        <div :style="{'width': d2navBar+'%'}">WORK</div>
-                    </dd>
-                </dl>
-            </div>
-            <div class="todetail">
-                <button class="button button--nina button--text-upper interaction" data-text="details" @click="GoDetails">
-                    <span>D</span><span>E</span><span>T</span><span>A</span><span>I</span><span>L</span><span>S</span>
-                </button>
-            </div>
-        </el-container>
-    </div>
-    <!-- 生活 -->
-    <div id="d3" :class="classList3" v-mwheel="'d3'">
-
-    </div>
-    <!-- 联系我 -->
-    <div id="d4" :class="classList4" v-mwheel="'d4'">
-        <el-container>
-            <el-row style="height: calc(100% - 60px);">
-                <el-col :span="16" class="D4left">
-                    <el-row style="margin:30px 0 28.5vh;font-size: 5vh">About Me</el-row>
-                    <el-row><span class="interaction"
-                                  @click="openUrl('https://blog.csdn.net/weixin_43952253','_blank')">CSDN</span>
-                    </el-row>
-                    <el-row><span class="interaction"
-                                  @click="openUrl('https://github.com/Storm-J','_blank')">GitHub</span></el-row>
-                    <el-row><span class="interaction" @click="openUrl('mailto:jh.x_x@qq.com','_self')">Email</span>
-                    </el-row>
-                    <el-row><span class="interaction" @click="">CV</span></el-row>
-                    <div class="Dividing interaction"></div>
-                    <div class="ContactME">
-                        I have a strong interest in Web front-end technology since my graduation from the University.
-                        I aspire to be a great Front-end Developer. Going from usability, interactivity, and visual effects,
-                        I’m dedicated to creating better experience possible for the user.
-                    </div>
-                </el-col>
-                <el-col :span="8" class="D4right">
-                    <el-row style="margin:30px 0 28.5vh;"></el-row>
-                    <el-row><i class="interaction iconfont icon-csdn"
-                               @click="openUrl('https://blog.csdn.net/weixin_43952253')"></i></el-row>
-                    <el-row><i class="interaction iconfont icon-github"
-                               @click="openUrl('https://github.com/Storm-J')"></i></el-row>
-                    <el-row><i class="interaction iconfont icon-email"
-                               @click="openUrl('mailto:jh.x_x@qq.com','_self')"></i></el-row>
-                    <el-row><i class="interaction iconfont icon-resume" @click=""></i></el-row>
-                    <div class="backTop interaction" @click="backTop">
-                        <div class="backTopBox"><span></span></div>
-                        Back to Top
-                    </div>
-                </el-col>
-            </el-row>
-            <el-footer>Copyright © Storm_J</el-footer>
-        </el-container>
-    </div>
-    <!-- 鼠标样式 -->
-    <div class="cursor"></div>
-</el-container>
-
-<script src="js/modernizr-3.11.2.min.js"></script>
-<!-- 自己的js -->
-<script src="js/less.min.js"></script>
-<script src="vue/vue.js"></script>
-<script src="vue/element-ui.js"></script>
-<script src="vue/axios.min.js"></script>
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/index.js"></script>
+<div id="app"></div>
+<script src="js/chunk-vendors.98a2f300.js"></script>
+<script src="js/app.5540edc5.js"></script>
 </body>
 </html>
